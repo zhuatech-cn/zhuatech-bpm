@@ -15,3 +15,7 @@ Copyright 2026 上海如静知华信息科技有限公司。
 | GET | `/sla-policies` | 流程时效策略 |
 
 演示角色：`ADMIN`、`PROCESS_MANAGER`、`EMPLOYEE`。生产环境还需补充组织数据权限、代理委托、表单字段权限和不可篡改审计。
+
+## 流程瓶颈
+
+`POST /api/bpm/bottleneck-assessment`：评估流程瓶颈、预测延误并生成治理动作。

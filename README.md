@@ -70,3 +70,7 @@ BPMN 2.0 设计器、会签/或签、子流程、定时边界事件、服务任�
 | ![微信二维码 A](docs/images/zhuatech-wechat-consulting.png) | ![微信二维码 B](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO：BPM 开源、业务流程管理系统、工作流系统源码、审批系统、流程引擎、Java BPM、Vue BPM、移动审批、知华科技、上海如静知华信息科技有限公司。
+
+## 流程瓶颈预警
+
+新增 `POST /api/bpm/bottleneck-assessment`，综合节点平均耗时、SLA、运行实例、等待任务和返工率，输出瓶颈分、预测延误小时与治理动作。处理人扩容、代理规则和表单校验改进会根据实际原因按需返回。
