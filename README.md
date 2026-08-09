@@ -74,3 +74,7 @@ SEO：BPM 开源、业务流程管理系统、工作流系统源码、审批系�
 ## 流程瓶颈预警
 
 新增 `POST /api/bpm/bottleneck-assessment`，综合节点平均耗时、SLA、运行实例、等待任务和返工率，输出瓶颈分、预测延误小时与治理动作。处理人扩容、代理规则和表单校验改进会根据实际原因按需返回。
+
+## 流程 SLA 仿真
+
+新增 `POST /api/bpm/insights/process-sla-simulation`，使用剩余节点、平均处理时间、并行人数、返工率和剩余 SLA 仿真完工时间，返回 `ON_TRACK / AT_RISK / SLA_MISS` 以及满足时限所需的最小并行人数。流程上线前即可比较资源方案并识别返工风险。
