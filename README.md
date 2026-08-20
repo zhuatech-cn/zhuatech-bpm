@@ -78,3 +78,7 @@ SEO：BPM 开源、业务流程管理系统、工作流系统源码、审批系�
 ## 流程 SLA 仿真
 
 新增 `POST /api/bpm/insights/process-sla-simulation`，使用剩余节点、平均处理时间、并行人数、返工率和剩余 SLA 仿真完工时间，返回 `ON_TRACK / AT_RISK / SLA_MISS` 以及满足时限所需的最小并行人数。流程上线前即可比较资源方案并识别返工风险。
+
+## 审批代理与升级路由
+
+新增 `POST /api/bpm/insights/approval-delegation`，结合待办量、最老任务时长、SLA、主审批人与代理人容量、职责分离冲突及高金额事项，返回 `KEEP_PRIMARY / ACTIVATE_DELEGATION / ESCALATE`，并给出主办、代理和升级任务数量。代理启用过程会保留职责冲突校验与双人复核建议。
