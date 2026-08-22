@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const accounts=[
   {code:'FLOW-CONTRACT',name:'合同评审流程',bank:'法务 · 财务 · 交付联合评审',type:'业务流程',balance:286,available:278,status:'已发布'},
   {code:'FLOW-PURCHASE',name:'采购申请流程',bank:'申请 · 询价 · 审批 · 下单',type:'采购流程',balance:128,available:124,status:'已发布'},

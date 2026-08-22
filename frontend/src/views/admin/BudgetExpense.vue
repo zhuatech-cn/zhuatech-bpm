@@ -1,4 +1,4 @@
-<!-- Copyright 2026 上海如静知华信息科技有限公司 -->
+<!-- Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ -->
 <script setup>import AdminShell from '../../components/AdminShell.vue';import StatusBadge from '../../components/StatusBadge.vue';import {budgets,expenses} from '../../api/mock'</script>
 <template><AdminShell><template #title>任务与时效</template><div class="page-heading"><div><p>TASK & SLA</p><h1>任务与时效</h1><span>个人待办、团队负荷、超时预警与流程 SLA 管理</span></div><div><button class="button secondary">配置时效规则</button><button class="button primary">批量转交</button></div></div>
 <section class="budget-head"><div><span>本月流程任务</span><strong>1,952<small> 项</small></strong><p>已办结 1,804 项 · 处理中 144 项 · 超时 4 项</p></div><div class="donut"><b>92.4%</b><small>SLA 达标</small></div><dl><div><dt>平均处理</dt><dd>6.8 小时</dd></div><div><dt>预警流程</dt><dd>项目变更</dd></div><div><dt>我的待办</dt><dd>4 项</dd></div></dl></section>

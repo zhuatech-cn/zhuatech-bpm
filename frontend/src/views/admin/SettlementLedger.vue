@@ -1,4 +1,4 @@
-<!-- Copyright 2026 上海如静知华信息科技有限公司 -->
+<!-- Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ -->
 <script setup>import {ref} from 'vue';import AdminShell from '../../components/AdminShell.vue';import StatusBadge from '../../components/StatusBadge.vue';import {receivables,payables} from '../../api/mock';const tab=ref('运行中实例')</script>
 <template><AdminShell><template #title>流程实例</template><div class="page-heading"><div><p>PROCESS INSTANCES</p><h1>流程实例</h1><span>从发起、流转、催办到归档的全程可追溯实例台账</span></div><div><button class="button secondary">导出实例</button><button class="button primary">＋ 发起流程</button></div></div>
 <section class="settlement-summary"><article><span>运行中实例</span><b>199 个</b><small>12 类流程 · 48 个节点</small></article><article><span>今日已办结</span><b>331 个</b><small class="positive">较昨日同期 +8.4%</small></article><article class="alert"><span>已超时实例</span><b>3 个</b><small>最长超时 4 小时 12 分</small></article><article><span>平均处理时长</span><b>6.8 小时</b><small>较上月缩短 1.2 小时</small></article><div><span>本月 SLA 达标率</span><b>92.4%</b><i><em style="width:92.4%"></em></i></div></section>

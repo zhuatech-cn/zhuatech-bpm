@@ -1,4 +1,4 @@
-<!-- Copyright 2026 上海如静知华信息科技有限公司 -->
+<!-- Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ -->
 <script setup>
 const groups=[
   {label:'流程运营',items:[['/admin/cockpit','流程运营台','⌂'],['/admin/treasury','流程设计器','￥'],['/admin/settlement','流程实例','⇄'],['/admin/budget','任务与时效','▤']]},
