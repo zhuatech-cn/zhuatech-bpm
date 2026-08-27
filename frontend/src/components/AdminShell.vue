@@ -2,7 +2,7 @@
 <script setup>
 const groups=[
   {label:'流程运营',items:[['/admin/cockpit','流程运营台','⌂'],['/admin/treasury','流程设计器','￥'],['/admin/settlement','流程实例','⇄'],['/admin/budget','任务与时效','▤']]},
-  {label:'分析与协同',items:[['/admin/reports','流程分析','⌁'],['/employee/expenses','移动审批台','◇']]}
+  {label:'分析与协同',items:[['/admin/reports','流程分析','⌁'],['/admin/governance','企业流程治理','◎'],['/employee/expenses','移动审批台','◇']]}
 ]
 </script>
 <template><div class="app-shell"><aside class="sidebar">

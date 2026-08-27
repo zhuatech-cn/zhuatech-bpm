@@ -1,0 +1,8 @@
+-- Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/
+CREATE TABLE deep_bpm_definition (id BIGINT PRIMARY KEY AUTO_INCREMENT,process_key VARCHAR(255) NOT NULL,version_no INT NOT NULL,name VARCHAR(255),status VARCHAR(32) NOT NULL,created_at DATETIME(6) NOT NULL,lock_version BIGINT NOT NULL,UNIQUE KEY uk_deep_bpm_definition(process_key,version_no));
+CREATE TABLE deep_bpm_node (id BIGINT PRIMARY KEY AUTO_INCREMENT,definition_id BIGINT NOT NULL,node_code VARCHAR(255),sequence_no INT NOT NULL,approver_role VARCHAR(255),sla_hours INT NOT NULL,UNIQUE KEY uk_deep_bpm_node(definition_id,sequence_no));
+CREATE TABLE deep_bpm_instance (id BIGINT PRIMARY KEY AUTO_INCREMENT,instance_no VARCHAR(255) NOT NULL,definition_id BIGINT,initiator VARCHAR(255),business_key VARCHAR(255),status VARCHAR(32) NOT NULL,current_sequence INT NOT NULL,created_at DATETIME(6) NOT NULL,ended_at DATETIME(6),lock_version BIGINT NOT NULL,UNIQUE KEY uk_deep_bpm_instance(instance_no));
+CREATE TABLE deep_bpm_task (id BIGINT PRIMARY KEY AUTO_INCREMENT,instance_id BIGINT,node_id BIGINT,task_no VARCHAR(255) NOT NULL,assignee VARCHAR(255),status VARCHAR(32) NOT NULL,due_at DATETIME(6),decision VARCHAR(32),comment VARCHAR(255),escalated BOOLEAN NOT NULL,lock_version BIGINT NOT NULL,UNIQUE KEY uk_deep_bpm_task(task_no));
+CREATE TABLE deep_bpm_event (id BIGINT PRIMARY KEY AUTO_INCREMENT,action VARCHAR(255),aggregate_no VARCHAR(255),detail VARCHAR(255),created_at DATETIME(6));
+CREATE INDEX idx_deep_bpm_task_sla ON deep_bpm_task(status,due_at,escalated);
+CREATE INDEX idx_deep_bpm_instance_status ON deep_bpm_instance(status,created_at);
